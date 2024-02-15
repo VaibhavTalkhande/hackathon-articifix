@@ -25,8 +25,8 @@ app.get('/', (req, res) => {
 
 // Example API route
 app.get('/api/example', (req, res) => {
-    console.log('This is an example API route');    
-    res.json({ message: 'This is an example API route' });
+    console.log('This is an example API route from Express!');    
+    res.json({ message: 'This is an example API route from Express' });
 });
 
 // Start server
