@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Router, Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -26,7 +26,6 @@ function App() {
   return (
     <div>
       <h1>{message}</h1>
-      <BrowserRouter>
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -38,9 +37,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/contact/:name" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      </BrowserRouter>
 
     </div>
   );
